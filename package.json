@@ -1,0 +1,32 @@
+{
+  "name": "wasm-morph",
+  "version": "0.1.0",
+  "description": "WebAssembly binary translation",
+  "main": "lib",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drom/wasm-morph.git"
+  },
+  "keywords": [
+    "WAST",
+    "WebAssembly"
+  ],
+  "author": "Aliaksei Chapyzhenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drom/wasm-morph/issues"
+  },
+  "homepage": "https://github.com/drom/wasm-morph#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.7.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5"
+  }
+}

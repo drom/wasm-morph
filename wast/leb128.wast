@@ -8,7 +8,11 @@
     (local $dat i32)
     (loop $label$break$L1 $label$continue$L1
       (set_local $res
-        (i32.and
+        (i32.or
+          (i32.shl
+            (get_local $res)
+            (i32.const 7)
+          )
           (i32.and
             (set_local $dat
               (i32.load8_u
@@ -17,16 +21,20 @@
             )
             (i32.const 127)
           )
-          (i32.shl
-            (get_local $res)
-            (i32.const 7)
-          )
         )
       )
       (br_if $label$break$L1
-        (i32.and
-          (get_local $dat)
-          (i32.const 128)
+        (i32.eqz
+          (i32.and
+            (get_local $dat)
+            (i32.const 128)
+          )
+        )
+      )
+      (set_local $iptr
+        (i32.add
+          (get_local $iptr)
+          (i32.const 1)
         )
       )
       (br_if $label$continue$L1
