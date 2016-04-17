@@ -298,7 +298,7 @@
                 (set_local $res
                   (i32.or
                     (get_local $res)
-                    (i32.const -1433403392)
+                    (i32.const -2097152)
                   )
                 )
               )
@@ -312,7 +312,7 @@
             (set_local $res
               (i32.or
                 (get_local $res)
-                (i32.const -1431670784)
+                (i32.const -16384)
               )
             )
           )
@@ -326,7 +326,7 @@
         (set_local $res
           (i32.or
             (get_local $res)
-            (i32.const -1431655808)
+            (i32.const -128)
           )
         )
       )
